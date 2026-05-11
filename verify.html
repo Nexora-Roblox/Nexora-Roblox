@@ -73,7 +73,7 @@
             // Store code_verifier in sessionStorage
             sessionStorage.setItem('code_verifier', codeVerifier);
 
-            const authUrl = `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=${scope}&code_challenge=${codeChallenge}&code_challenge_method=S256`;
+            const authUrl = `https://discord.com/oauth2/authorize?client_id=1501107942399938640&response_type=code&redirect_uri=https%3A%2F%2Fnexora-roblox.github.io%2FNexora-Roblox%2Fworkspace.html&scope=identify`;
 
             window.location.href = authUrl;
         });
