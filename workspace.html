@@ -78,13 +78,13 @@
             const code = urlParams.get('code');
 
             if (!code) {
-                document.getElementById('content').innerHTML = '<p class="text-red-400">Error: No authorization code received.</p>';
+                document.getElementById('content').innerHTML = '<p class="text-gray-400">No authorization code found. Please verify your Discord account from <a href="verify.html" class="text-blue-400 hover:underline">verify.html</a>.</p>';
                 return;
             }
 
             const codeVerifier = sessionStorage.getItem('code_verifier');
             if (!codeVerifier) {
-                document.getElementById('content').innerHTML = '<p class="text-red-400">Error: Code verifier not found.</p>';
+                document.getElementById('content').innerHTML = '<p class="text-red-400">Error: Code verifier not found. Please start the verification process from <a href="verify.html" class="text-blue-400 hover:underline">verify.html</a>.</p>';
                 return;
             }
 
